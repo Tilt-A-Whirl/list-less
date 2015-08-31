@@ -15,6 +15,11 @@ export default Ember.Route.extend({
 	/* Item input actions */
 	actions: {
 
+		/* Transition to shopping list on bad list id */
+		error: function(error) {
+		    this.transitionTo('list.index', '0');
+		},
+
 		/* Creates a new item */
 		createItem: function(newItemTitle) {
 
