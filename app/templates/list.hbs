@@ -9,7 +9,7 @@
 
 		<label>{{input type="checkbox" name="toggleAllComplete" checked=completeAllItems}} Complete all</label>
 		<button {{action "clearAddedItems" model.list}}>Clear added</button>
-		<button {{action "toggleAlphaSort"}}>{{sort-type controller.alphaSort}}</button>
+		<button {{action "toggleAlphaSort"}}>{{sort-type alphaSort}}</button>
 
 	{{/if}}
 
@@ -17,7 +17,7 @@
 
 	{{#if model.list.isShopping}}
 
-		{{#if controller.isListEmpty}}
+		{{#if isListEmpty}}
 			<p>Your shopping list is empty. Please include a list or add an item.</p>
 		{{/if}}
 
