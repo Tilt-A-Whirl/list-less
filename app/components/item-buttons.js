@@ -7,7 +7,7 @@ export default Ember.Component.extend({
 	actions: {
 
 		/* Delete list item */
-		deleteItem: function(item, list) {
+		deleteItem: function(item) {
 	    	item.deleteRecord(); // clears relationships
 	    	item.save();
 	    },
