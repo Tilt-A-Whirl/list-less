@@ -1,7 +1,17 @@
-# Listless
+# list:less
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+For months now, I've wanted a grocery list app that would allow me 
+to save separate lists and then just select the lists I wanted to 
+be added to my master shopping list, along with allowing me to add 
+any additional items not saved in a separate 'recipe' list (paper 
+towels, trash bags, etc.). I've had mobile apps that come close to 
+this, but only by letting me save multiple lists and then going no 
+further; they never gave me the ability to select lists to be included 
+and then compile all my items into one master list. So when i needed 
+a good project to get me started in ember.js, this seemed like a good 
+place to start.
+
+Note: This app uses fixture data
 
 ## Prerequisites
 
@@ -38,10 +48,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
