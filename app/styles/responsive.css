@@ -1,0 +1,168 @@
+/************************/
+/* responsive styles    */
+/************************/
+
+/* 600px - 800px */
+@media screen and (min-width: 600px) {
+
+    /************************/
+    /* labels               */
+    /************************/
+
+    .list-detail-toolbar label {
+        width: 35%;
+        position: relative;
+        top: 0;
+    }
+
+    /************************/
+    /* lists and list items */
+    /************************/
+
+    .parent-list0 {
+        margin-top: -40px;
+    }
+
+    /************************/
+    /* buttons              */
+    /************************/
+
+    button.delete {
+        margin-left: 10px;
+    }
+
+    .list-detail-toolbar button {
+        margin-top: 0;
+        margin-left: 10px;
+        float: right;
+    }
+
+}
+
+/* 800px - 930px */
+@media screen and (min-width: 800px) {
+
+    /************************/
+    /* containers           */
+    /************************/
+
+    #lists-main {
+        width: 45%;
+        float: right;
+    }
+
+    #list-detail {
+        float: left;
+        width: 50%;
+    }
+
+    /************************/
+    /* anchors              */
+    /************************/
+
+    .lists-toolbar a {
+        position: absolute;
+        left: 1.2em;
+        right: auto;
+        top: 94px;
+    }
+
+    /************************/
+    /* labels               */
+    /************************/
+
+    .list-detail-toolbar label {
+        width: 85%;
+        position: absolute;
+        top: 86px;
+    }
+
+    /************************/
+    /* buttons              */
+    /************************/
+
+    button.delete {
+        margin-left: 0;
+    }
+
+    .list-detail-toolbar button {
+        margin-left: 0;
+        float: none;
+    }
+
+    /************************/
+    /* lists and list items */
+    /************************/
+
+    .lists-all {
+        margin-top: 62px;
+    }
+
+    .parent-list0 {
+        margin-top: 0;
+    }
+
+}
+
+/* 930px - 1100px */
+
+@media screen and (min-width: 930px) {
+
+    /************************/
+    /* anchors              */
+    /************************/
+
+    .lists-toolbar a {
+        position: absolute;
+        left: auto;
+        right: 0%;
+        top: 42px;
+    }
+
+    /************************/
+    /* lists and list items */
+    /************************/
+
+    .lists-all {
+        margin-top: 0;
+    }
+
+}
+
+/* 1100px + */
+
+@media screen and (min-width: 1200px) {
+    
+    /************************/
+    /* labels               */
+    /************************/
+
+    .list-detail-toolbar label {
+        width: auto;
+        position: relative;
+        top: auto;
+    }
+
+    /************************/
+    /* lists and list items */
+    /************************/
+
+    .parent-list0 {
+        margin-top: -40px;
+    }
+
+    /************************/
+    /* buttons              */
+    /************************/
+
+    button.delete {
+        margin-left: 10px;
+    }
+
+    .list-detail-toolbar button {
+        margin-top: 0;
+        margin-left: 10px;
+        float: right;
+    }
+
+}

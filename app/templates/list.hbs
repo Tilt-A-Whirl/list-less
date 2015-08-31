@@ -1,0 +1,65 @@
+<div id="list-detail">
+
+	<h2>{{model.list.title}}</h2>
+
+	<div class="list-detail-toolbar">
+		{{input type="text" placeholder="Add a new item" value=newItemTitle enter="createItem"}}
+
+	{{#if model.list.isShopping}}
+
+		<label>{{input type="checkbox" name="toggleAllComplete" checked=completeAllItems}} Complete all</label>
+		<button {{action "clearAddedItems" model.list}}>Clear added</button>
+		<button {{action "toggleAlphaSort"}}>{{sort-type controller.alphaSort}}</button>
+
+	{{/if}}
+
+	</div>
+
+	{{#if model.list.isShopping}}
+
+		{{#if controller.isListEmpty}}
+			<p>Your shopping list is empty. Please include a list or add an item.</p>
+		{{/if}}
+
+		<ul class="list-items parent-list{{model.list.id}}">
+
+			{{#each sortedItems as |item|}}
+
+				<li class="item-list{{item.list.id}} {{completed-display item.isCompleted}} {{item-display item.isIncluded}}">
+
+					<label>
+						{{input type="checkbox" name="toggleComplete" checked=item.isCompleted}} 
+						{{item.title}} ({{item.quantity}})
+					</label> 
+
+					{{item-buttons item=item list=model.list}}
+
+				</li>
+
+			{{/each}}
+
+		</ul>
+
+	{{else}}
+
+		<ul class="list-items parent-list{{model.list.id}}">
+
+			{{#each sortedItems as |item|}}
+
+				<li class="item-list{{item.list.id}}">
+
+					<label>
+						{{item.title}} ({{item.quantity}})
+					</label>
+
+					{{item-buttons item=item list=model.list}}
+
+				</li>
+
+			{{/each}}
+
+		</ul>
+
+	{{/if}}
+
+</div>

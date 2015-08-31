@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember</h2>
+<header>
+	<h1 id="title">list:<span class="white">less</span></h1>
+	<nav>
+		<ul>
+			<li>{{#link-to 'index'}}Home{{/link-to}}</li>
+			<li>{{#link-to 'about'}}About this App{{/link-to}}</li>
+		</ul>
+	</nav>
+</header>
 
-{{outlet}}
+<div id="container">
+
+	{{outlet}}
+
+</div>
+
+<footer>
+<p>&copy; 2015 Amy Rebecca Tucker. Made with <a href="http://emberjs.com" target="_blank">ember</a>.</p>
+</footer>

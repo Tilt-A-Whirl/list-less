@@ -1,0 +1,358 @@
+/************************/
+/* list:less app styles */
+/************************/
+
+/************************/
+/* basic elements       */
+/************************/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	background: url('/assets/images/sack.jpg') repeat;
+	font-family: 'Tillana', cursive;
+	font-weight: 400;
+	text-transform: lowercase;
+	font-size: 1em;
+}
+
+nav {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+h1, h2 { 
+	font-weight: 800;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+	margin-bottom: 5px;
+}
+
+h2 {
+	margin: 20px 0;
+	line-height: 1.4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+a, a:visited {
+	color: #963;
+}
+
+a:hover {
+	color: #630;
+}
+
+footer {
+	text-align: center;
+	clear: both;
+}
+
+footer a {
+	font-weight: 800;
+}
+
+/************************/
+/* containers           */
+/************************/
+
+#container {
+	margin: 0 auto;
+	width: 85%;
+}
+
+#lists-main {
+	background-color: #f7f7c7;
+	padding: 1px 5% 20px 5%;
+	margin: 0 auto 30px;
+}
+
+#lists-main, 
+#list-detail, 
+#static-info {
+	box-shadow: 0px 0px 8px 2px #666;
+	padding-bottom: 20px;
+}
+
+#list-detail,
+#static-info {
+	margin: 0 auto 60px;
+}
+
+#list-detail {
+	width: 100%;
+	background-color: #f7f7f7;
+	padding-top: 1px;
+}
+
+#static-info {
+	background-color: #f7f7f7;
+	padding: 10px 40px 20px;
+}
+
+[class*="toolbar"] {
+	position: relative;
+}
+
+.lists-toolbar {
+    margin-bottom: 40px;
+}
+
+.list-detail-toolbar {
+	padding: 0 10%;
+	margin-bottom: 70px;
+}
+
+.item-buttons {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translateY(-50%);
+	padding-top: 2px;
+}
+
+[class*="parent-list"] .item-buttons {
+	right: 10%;
+}
+
+/************************/
+/* headings             */
+/************************/
+
+#list-detail h2{ 
+	padding: 0 10%;
+}
+
+/************************/
+/* paragraphs           */
+/************************/
+
+#list-detail p {
+	padding: 0 10%;
+}
+
+/************************/
+/* inputs               */
+/************************/
+
+input[type="text"] {
+	width: 100%;
+	font-family: 'Tillana', cursive;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+input[type="checkbox"] {
+	vertical-align: middle;
+	display: inline-block;  
+    width: 15px;  
+    height: 15px;  
+    background-color: #aaa;  
+    border-radius: 0px;
+    border: 3px solid #ccc;
+}
+
+/************************/
+/* labels               */
+/************************/
+
+label {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	display: inline-block;
+}
+
+.parent-list0 label {
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+.lists-all label {
+	width: 75%;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+.list-items label {
+	width: 48%;
+	padding-top: 8px;
+}
+
+[class*="toolbar"] label {
+	margin-right: 20px;
+}
+
+.lists-toolbar label {
+	width: auto;
+}
+
+.list-detail-toolbar label {
+	width: 100%;
+	position: absolute;
+	top: 86px;
+}
+
+.complete label {
+	text-decoration: line-through;
+}
+
+/************************/
+/* buttons              */
+/************************/
+
+button {
+    background-color: #cb9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Tillana', cursive;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-decoration: none;
+    border: none;
+    min-width: 1.6em;
+    text-transform: lowercase;
+    line-height: 1.3em;
+    padding: 2px 6px;
+}
+
+button:hover {
+    border: none;
+    background-color: #ba8;
+    box-shadow: 0px 0px 1px #000;
+}
+
+.list-detail-toolbar button {
+	margin-top: 0;
+	margin-left: 0;
+}
+
+button.delete {
+	background-color: #955;
+}
+
+button.delete:hover {
+	background-color: #733;
+}
+
+.list-detail-toolbar button:first-of-type {
+	float: right;
+	background-color: #955;
+}
+
+.list-detail-toolbar button:first-of-type:hover {
+	background-color: #733;
+}
+
+/************************/
+/* lists and list items */
+/************************/
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	line-height: 2em;
+	position: relative;
+}
+
+nav ul {
+	margin: 0 auto;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 0 20px;
+	font-weight: 800;
+	font-size: 1.2em;
+}
+
+#static-info ul {
+	list-style: disc;
+	list-style-position: inside;
+	margin-left: 2em;
+}
+
+#static-info li {
+	font-size: 1em;
+	line-height: 1.4em;
+	text-indent: -1.2em;
+	padding-left: 1.2em;
+}
+
+.list-items li {
+	border-bottom: 1px solid #77f;
+	padding: 0;
+	padding-left: 10%;
+}
+
+[class*="parent-list"] {
+	margin-top: -40px;
+}
+
+.parent-list0 {
+	margin-top: 0;
+}
+
+/************************/
+/* anchors              */
+/************************/
+
+.lists-toolbar a {
+	font-size: 1.2em;
+	font-weight: 800;
+	position: absolute;
+	right: 0%;
+	top: 42px;
+}
+
+.lists-all li a {
+	line-height: 1.3em;
+}
+
+/************************/
+/* phrase tags          */
+/************************/
+
+#static-info strong {
+	color: #b00;
+	font-weight: 800;
+}
+
+/************************/
+/* misc classes         */
+/************************/
+
+.white {
+	color: #f2f2f2;
+}
+
+.item-list0 {
+	color: #b00;
+}
+
+.complete {
+	color: #ccc;
+}
+
+.complete .quantity {
+	display: none;
+}
+
+.list0, .hidden {
+	display: none;
+}

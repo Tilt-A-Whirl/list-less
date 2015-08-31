@@ -1,0 +1,29 @@
+<div id="lists-main">
+
+	<h2>Saved Lists</h2>
+
+	<div class="lists-toolbar">
+
+		{{input type="text" placeholder="Add a new list" value=newListTitle enter="createList"}}
+		<label>{{input type="checkbox" name="toggleSelectedLists" checked=includeAllLists}} Include all</label>
+		{{#link-to 'index'}}Shopping List{{/link-to}}
+		
+	</div>
+
+	<ul class="lists-all">
+
+		{{#each sortedLists as |list|}}
+
+			<li class="list{{list.id}}">
+				<label>{{input type="checkbox" name="toggleSelectedItems" checked=list.isActive}} 
+				{{#link-to 'list.index' list.id}}{{list.title}}{{/link-to}}</label>
+				<button class="item-buttons delete" {{action "deleteList" list}}>X</button>
+			</li>
+
+		{{/each}}
+
+	</ul>
+
+</div>
+
+{{outlet}}
