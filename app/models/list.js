@@ -11,8 +11,8 @@ export default DS.Model.extend({
     items: DS.hasMany('item'),
 
     /* Determines if current list is master shopping list */
-    isShopping: Ember.computed('id', function(key, value) {
-        if (this.get('id') == 0) {
+    isShopping: Ember.computed('id', function() {
+        if (this.get('id') === '0') {
             return true;
         }
         return false;

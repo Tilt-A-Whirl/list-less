@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     /* Sort items by list title, but make sure shopping list items always 
     come first */
     sortedItemsListShoppingFirst: Ember.computed('sortedItemsList', 
-    											 function(key, value) {
+    											 function() {
     	var shoppingItems = this.get('sortedItemsList').filterBy('list.id', '0');
     	return shoppingItems.addObjects(this.get('sortedItemsList').rejectBy('list.id', '0'));
     }),
@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
     sortedItems: Ember.computed('alphaSort', 
     							'sortedItemsAlpha', 
     							'sortedItemsList', 
-    							function(key, value) {
+    							function() {
     	if (this.get('alphaSort')) {
     		return this.get('sortedItemsAlpha');
     	}
@@ -35,7 +35,7 @@ export default Ember.Controller.extend({
     /* Check if current list is empty. Only used for shopping list 
     so message can be displayed when empty. */
     isListEmpty: Ember.computed('model.items.@each.isIncluded', 
-    							function(key, value){
+    							function(){
     	var items = this.get('model.items').filterBy('isIncluded', true);
 		if (items.get('length') > 0) {
 			return false;

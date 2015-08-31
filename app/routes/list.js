@@ -16,7 +16,7 @@ export default Ember.Route.extend({
 	actions: {
 
 		/* Transition to shopping list on bad list id */
-		error: function(error) {
+		error: function() {
 		    this.transitionTo('list.index', '0');
 		},
 
@@ -54,7 +54,7 @@ export default Ember.Route.extend({
 	aren't selected. */
     findItems: function(params) {
 		var list_id = params.list_id;
-		if (list_id != '0') {
+		if (list_id !== '0') {
 			return this.store.query('item', { list: list_id });
 		}
 		return this.store.findAll('item');

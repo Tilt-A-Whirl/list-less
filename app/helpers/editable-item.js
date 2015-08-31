@@ -11,7 +11,7 @@ This is only used in the item-buttons component. */
 export function editableItem(params/*, hash*/) {
 	var list_id = params[0];
 	var item_list_id = params[1];
-	if (list_id == item_list_id) {
+	if (list_id === item_list_id) {
 		return '';
 	}
   	return 'hidden';

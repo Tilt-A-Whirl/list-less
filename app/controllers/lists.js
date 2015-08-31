@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
     sortedLists: Ember.computed.sort('model', 'sortProps'),
 
     /* Selectable lists are all lists except the shopping (master) list */
-    selectableLists: Ember.computed('model', function(key, value) {
+    selectableLists: Ember.computed('model', function() {
     	return this.get('model').rejectBy('id', '0');
     }),
 
