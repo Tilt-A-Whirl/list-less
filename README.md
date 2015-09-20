@@ -22,6 +22,8 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Sass](http://sass-lang.com/)
 
 ## Installation
 
@@ -29,10 +31,12 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
+* `gem install sass`
 
 ## Running / Development
 
 * `ember server`
+* From the scss directory: sass --watch .:../app/styles
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
