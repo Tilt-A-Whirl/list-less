@@ -1,0 +1,290 @@
+@import 'reset';
+
+// Defs
+@import 'variables';
+@import 'mixins';
+@import 'extends';
+
+/* ----------------------------------------------------- */
+/* globals                                               */
+/* ----------------------------------------------------- */
+
+@import 'globals';
+
+/* ----------------------------------------------------- */
+/* containers                                            */
+/* ----------------------------------------------------- */
+
+#container {
+	margin: 0 auto;
+	width: 85%;
+}
+
+#lists-main {
+	background-color: $post-it;
+	padding: 1px 5% 20px 5%;
+	margin: 0 auto 30px;
+	@extend %box-shadow;
+	@media screen and (min-width: 800px) {
+		width: 45%;
+        float: right;
+	}
+}
+
+#list-detail, 
+#static-info {
+	@extend %box-shadow;
+	margin: 0 auto 40px;
+	background-color: $notepaper;
+}
+
+#list-detail {
+	width: 100%;
+	padding-top: 1px;
+	@media screen and (min-width: 800px) {
+		float: left;
+        width: 50%;
+	}
+	h2 { 
+		padding: 0 10%;
+	}
+	p {
+		padding: 0 10% 30px;
+	}
+}
+
+#static-info {
+	padding: 10px 40px 20px;
+	ul {
+		list-style: disc;
+		list-style-position: inside;
+		margin-left: 2em;
+		li {
+			font-size: 1em;
+			line-height: 1.4em;
+			@include hanging-indent(1.2em);
+		}
+	}
+	strong {
+		color: $deep-red;
+		font-weight: $fw-bold;
+	}
+}
+
+/* ----------------------------------------------------- */
+/* list toolbars                                         */
+/* ----------------------------------------------------- */
+
+[class*="toolbar"] {
+	position: relative;
+	label {
+		margin-right: 20px;
+	}
+}
+
+.lists-toolbar {
+    margin-bottom: 40px;
+    label {
+		width: auto;
+	}
+	a {
+		font-size: 1.2em;
+		font-weight: $fw-bold;
+		position: absolute;
+		right: 0%;
+		top: 47px;
+		@media screen and (min-width: 800px) {
+	        left: 1.2em;
+	        right: auto;
+	        top: 94px;
+		}
+		@media screen and (min-width: 930px) {
+	        left: auto;
+	        right: 0%;
+	        top: 47px;
+		}
+	}
+}
+
+.list-detail-toolbar {
+	padding: 0 10%;
+	margin-bottom: 70px;
+	label {
+		width: 100%;
+		position: absolute;
+		top: 86px;
+		@media screen and (min-width: 600px) {
+			width: 35%;
+        	position: relative;
+        	top: 0;
+		}
+		@media screen and (min-width: 800px) {
+			width: 85%;
+        	position: absolute;
+        	top: 86px;
+		}
+		@media screen and (min-width: 1200px) {
+			width: auto;
+        	position: relative;
+        	top: auto;
+		}
+	}
+	button {
+		margin-top: 0;
+		margin-left: 0;
+		@media screen and (min-width: 600px) {
+	        margin-left: 10px;
+	        float: right;
+		}
+		@media screen and (min-width: 800px) {
+			margin-left: 0;
+        	float: none;
+		}
+		@media screen and (min-width: 1200px) {
+        	margin-left: 10px;
+        	float: right;
+		}
+	}
+	button:first-of-type {
+		float: right;
+		background-color: $clear-red;
+	}
+	button:first-of-type:hover {
+		background-color: $clear-red-hover;
+	}
+}
+
+/* ----------------------------------------------------- */
+/* item buttons                                          */
+/* ----------------------------------------------------- */
+
+.item-buttons {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translateY(-50%);
+	padding-top: 2px;
+}
+
+/* ----------------------------------------------------- */
+/* item lists                                            */
+/* ----------------------------------------------------- */
+
+[class*="parent-list"] {
+	margin-top: -40px;
+	.item-buttons {
+		right: 10%;
+	}
+}
+
+.parent-list0 {
+	margin-top: 0;
+	label {
+		@include hanging-indent(1.2em);
+	}
+	@media screen and (min-width: 600px) {
+		margin-top: -40px;
+	}
+	@media screen and (min-width: 800px) {
+		margin-top: 0;
+	}
+	@media screen and (min-width: 1200px) {
+		margin-top: -40px;
+	}
+}
+
+.list-items {
+	label {
+		width: 48%;
+		padding-top: 8px;
+	}
+	li {
+		border-bottom: 1px solid $note-lines;
+		padding: 0;
+		padding-left: 10%;
+	}
+}
+
+/* ----------------------------------------------------- */
+/* list of lists                                         */
+/* ----------------------------------------------------- */
+
+.lists-all {
+	label {
+		width: 75%;
+		@include hanging-indent(1.5em);
+	}
+	li {
+		a {
+			line-height: 1.3em;
+		}
+	}
+	@media screen and (min-width: 800px) {
+		margin-top: 62px;
+	}
+	@media screen and (min-width: 930px) {
+		margin-top: 0;
+	}
+}
+
+/* ----------------------------------------------------- */
+/* item delete buttons                                   */
+/* ----------------------------------------------------- */
+
+button {
+	&.delete {
+		background-color: $clear-red;
+		@media screen and (min-width: 600px) {
+			margin-left: 10px;
+		}
+		@media screen and (min-width: 800px) {
+			margin-left: 0;
+		}
+		@media screen and (min-width: 1200px) {
+			margin-left: 10px;
+		}
+	}
+	&.delete:hover {
+		background-color: $clear-red-hover;
+	}
+}
+
+/* ----------------------------------------------------- */
+/* white type in title                                   */
+/* ----------------------------------------------------- */
+
+.almost-white {
+	color: $almost-white;
+}
+
+/* ----------------------------------------------------- */
+/* added shopping list items                             */
+/* ----------------------------------------------------- */
+
+.item-list0 {
+	color: $deep-red;
+}
+
+/* ----------------------------------------------------- */
+/* completed items                                       */
+/* ----------------------------------------------------- */
+
+.complete {
+	color: $complete;
+	label {
+		text-decoration: line-through;
+	}
+	.quantity {
+		display: none;
+	}
+}
+
+/* ----------------------------------------------------- */
+/* no-display classes                                    */
+/* ----------------------------------------------------- */
+
+.list0,
+.hidden {
+	display: none;
+}

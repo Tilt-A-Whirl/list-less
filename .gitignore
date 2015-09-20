@@ -9,6 +9,8 @@
 /bower_components
 
 # misc
+scss/.sass-cache
+app/styles/*.map
 /.sass-cache
 /connect.lock
 /coverage/*

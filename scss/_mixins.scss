@@ -1,0 +1,6 @@
+// Hanging indent for list items
+
+@mixin hanging-indent($value) {
+	padding-left: $value;
+	text-indent: -($value);
+}
