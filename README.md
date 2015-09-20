@@ -36,7 +36,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember server`
-* From the scss directory: sass --watch .:../app/styles
+* From the scss directory: `sass --watch .:../app/styles`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
