@@ -11,6 +11,8 @@ and then compile all my items into one master list. So when i needed
 a good project to get me started in ember.js, this seemed like a good 
 place to start.
 
+View the working prototype here: http://list.artful-i.com/
+
 Note: This app uses fixture data
 
 ## Prerequisites
